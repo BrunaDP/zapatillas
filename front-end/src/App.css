@@ -1,0 +1,13 @@
+@font-face {
+    font-family: "Pyxidium Quick";
+    /*Can be any text*/
+    src: local("Pyxidium Quick"),
+        url("./assets/Fonts/PyxidiumQuickV2.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
