@@ -5,6 +5,13 @@
         url("./assets/Fonts/PyxidiumQuickV2.ttf");
 }
 
+@font-face {
+    font-family: "Montserrat Thin";
+    /*Can be any text*/
+    src: local("Montserrat Thin"),
+        url("./assets/Fonts/Montserrat-Thin.ttf");
+}
+
 * {
     margin: 0;
     padding: 0;
