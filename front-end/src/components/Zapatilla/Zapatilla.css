@@ -31,34 +31,71 @@
 
 }
 
-.container {
+/* la carta del producto*/
+.card {
     grid-column: 2;
     grid-row: 2;
     background-color: rgb(247, 247, 247);
     width: 290px;
-    height: 500px;
+    height: 420px;
     border-radius: 3%;
     text-align: center;
     box-shadow: 10px 10px 50px rgba(125, 0, 197, 0.39);
-    padding: 10px;
+    padding: 34px;
     border: 1px solid #d8d8d8;
+    transition: 0.5s;
 
+}
+
+.card:hover {
+    box-shadow: 10px 10px 50px #ff00c89d;
+    transform: scale(1.01);
+    height: 500px;
+}
+
+.card:hover #box_3 {
+    opacity: 1;
+    visibility: visible;
 }
 
 .container_background {
     height: 200px;
     width: 220px;
-    border-radius: 3%;
+    border-radius: 3px;
     box-shadow: 10px 10px 50px #7700ff0c;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
+    border: 1px solid #d8d8d8;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+
 }
 
+.cuadrado {
+    grid-row: 1;
+    height: 35px;
+    width: 35px;
+    background-color: rgba(143, 143, 143, 0.199);
+    border-bottom: 1px solid gray;
+    border-radius: 100px;
+    display: flex;
+}
 
+.corazon {
+    color: #c72092;
+    margin: auto;
+}
 
 .container_background:hover {
     background-color: rgb(226, 226, 226);
+}
+
+.cuadrado_2 {
+    display: flex;
+    justify-content: end;
+    grid-row: 3;
+    height: 30px;
+    background-color: rgba(143, 143, 143, 0.199);
+    border-bottom: 1px solid gray;
+    border-radius: 2px;
 }
 
 .text_1 {
@@ -70,7 +107,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: auto;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.star {
+    color: rgb(255, 208, 0);
+    font-size: 14px;
+
 }
 
 .box_2 {
@@ -83,51 +127,37 @@
 
 }
 
-.box_3 {
-    grid: flex;
+#box_3 {
     margin: auto;
+    margin-top: 20px;
     background: linear-gradient(to right, #c72092, #6c14d0);
-    font-size: 10px;
     border: 1px solid #6c14d0;
     height: 40px;
     width: 200px;
     border-radius: 10px;
     color: #d8d8d8;
     font-size: large;
-
-}
-
-.nome_3 {
+    cursor: pointer;
     display: flex;
-    justify-content: center;
-    width: 200px;
-    height: 40px;
+    justify-content: space-around;
     align-items: center;
+    opacity: 0.0;
+    transition: opacity 1 .6s;
 
 }
+
+
+
 
 .box_4 {
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 6px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     align-items: center;
     width: 100px;
+    font-weight: bold;
+    font-size: 20px;
 
 
 }
-
-.star {
-    color: gold;
-}
-
-/*.image {
-    grid-column-start: 3;
-    grid-row-start: 2;
-    grid-column-end: 10;
-    max-height: 200px;
-    max-width: 200px;
-
-
-    font-family: Montserrat-Thin;
-}*/
