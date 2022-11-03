@@ -11,17 +11,18 @@
     background-position: center;
 }*/
 
-.pagina_producto {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(1, 90px 200px 500px);
+.nav_product {
+    height: 1200px;
     background-color: rgb(43, 220, 226);
+    display: flex;
+    flex-direction: column;
 }
 
 .nome_product {
-    grid-column-start: 1;
-    grid-column-end: 10;
-    text-align: center;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
     font-size: 90px;
     line-height: 70px;
     background: linear-gradient(to right, #c72092, #6c14d0);
@@ -32,9 +33,7 @@
 }
 
 /* la carta del producto*/
-.card {
-    grid-column: 2;
-    grid-row: 2;
+.product_card {
     background-color: rgb(247, 247, 247);
     width: 290px;
     height: 420px;
@@ -47,13 +46,13 @@
 
 }
 
-.card:hover {
+.product_card:hover {
     box-shadow: 10px 10px 50px #ff00c89d;
     transform: scale(1.01);
     height: 500px;
 }
 
-.card:hover #box_3 {
+.product_card:hover #box_3 {
     opacity: 1;
     visibility: visible;
 }
@@ -65,22 +64,30 @@
     box-shadow: 10px 10px 50px #7700ff0c;
     border: 1px solid #d8d8d8;
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 50px 1fr);
+    grid-template-columns: repeat(1, 1fr 50px);
 
 }
 
 .cuadrado {
     grid-row: 1;
+    grid-column: 2;
+    text-align: left;
+    justify-content: end;
+    align-items: flex-end;
     height: 35px;
     width: 35px;
-    background-color: rgba(143, 143, 143, 0.199);
-    border-bottom: 1px solid gray;
+    background-color: rgba(225, 0, 255, 0.103);
+    border: 1px solid #ff02af67;
     border-radius: 100px;
     display: flex;
+    margin: auto;
+    opacity: 0.0;
+    transition: opacity 1 .6s;
 }
 
 .corazon {
-    color: #c72092;
+    color: #ff02af;
     margin: auto;
 }
 
@@ -88,17 +95,12 @@
     background-color: rgb(226, 226, 226);
 }
 
-.cuadrado_2 {
-    display: flex;
-    justify-content: end;
-    grid-row: 3;
-    height: 30px;
-    background-color: rgba(143, 143, 143, 0.199);
-    border-bottom: 1px solid gray;
-    border-radius: 2px;
+.product_card:hover .cuadrado {
+    opacity: 1;
+    visibility: visible;
 }
 
-.text_1 {
+.product-name {
     font-family: Montserrat-Thin;
     margin-top: 15 px;
     border-bottom: 1px solid black;
@@ -117,7 +119,7 @@
 
 }
 
-.box_2 {
+.description {
     height: 50px;
     width: 220px;
     margin: auto;
@@ -149,7 +151,7 @@
 
 
 
-.box_4 {
+.precio {
     padding-top: 10px;
     padding-bottom: 6px;
     display: flex;
